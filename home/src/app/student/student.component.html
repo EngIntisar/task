@@ -5,10 +5,10 @@
     <table class="table">
 <thead>
     <tr>
-      <th>Name </th>
-      <th>Email</th>
-      <th>Marks(Out of 100)</th>
-      <th>PASS/FAIL</th>
+      <th class="bi bi-person-circle" >Name </th>
+      <th class="bi bi-envelope" >Email</th>
+      <th class="bi bi-123" > Marks(Out of 100)</th>
+      <th class="bi bi-trophy-fill" >PASS/FAIL</th>
     </tr>
 </thead>
 <tbody>
@@ -19,11 +19,39 @@
  <td >{{Student.Email}}</td>
  <td [ngClass]="getMarkColor(Student.Mark)">{{Student.Mark}}</td>
  <td>
-    <span *ngIf="Student.Mark > 50" class="pass-badge">PASS</span>
-    <span *ngIf="Student.Mark <= 50" class="fail-badge">Fail</span>
+    <span *ngIf="Student.Mark >= 50" class="pass-badge">PASS</span>
+    <span *ngIf="Student.Mark < 50" class="fail-badge">Fail</span>
  </td>
 
 </tr>
+<h1 style="color: darkred; text-align: center;" >----------------------------</h1>
+
+<div class="form-group">
+    <label for="exampleInputPassword1">How Many Student PASS</label>
+    <br>
+    <br>
+    <input type="number" class="form-control" id="exampleInputPassword1" style="border-color: darkolivegreen;" >
+    <br>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary" style="color: rgb(255, 255, 255); background-color: rgba(19, 125, 46, 0.816); width: 90px; height: 30px;">send</button>
+
+
+
+  <h1 style="color: darkred; text-align: center;" >----------------------------</h1>
+
+  <div class="form-group">
+      <label for="exampleInputPassword1">How Many Student FAIL</label>
+      <br>
+      <br>
+      <input type="number" class="form-control" id="exampleInputPassword1" style="border-color: darkred;" >
+      <br>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary" style="color: rgb(255, 255, 255); background-color: darkred; width: 90px; height: 30px;">send</button>
+
+
+
 
 
  </tbody>

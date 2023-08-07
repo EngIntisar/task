@@ -12,6 +12,8 @@ export class StudentComponent {
 [
     {Name:'Name 1', Email:'email1@gmail.com',Mark:55},
     {Name:'Name 2', Email:'Email2@gmail.com',Mark:30},
+    {Name:'Name 3', Email:'Email3@gmail.com',Mark:50},
+    {Name:'Name 4', Email:'Email3@gmail.com',Mark:20},
 
 ];
 
@@ -21,7 +23,7 @@ getMarkColor(Mark: number):string
 }
    getPassFailStatus(Mark: number):string
    {
-    return Mark > 50 ? 'PASS' : 'FAIL';
+    return Mark >= 50 ? 'PASS' : 'FAIL';
    }
 
    getStyle(): any {
@@ -32,7 +34,7 @@ getMarkColor(Mark: number):string
   
     return {
   
-      'background-color': '#D3D3D3',
+      'background-color': '#fff',
   
       // 'color': 'white',
   
