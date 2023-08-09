@@ -13,17 +13,21 @@
 </thead>
 <tbody>
 
-<tr *ngFor="let Student of studentList">
-   
- <td >{{Student.Name}}</td>
- <td >{{Student.Email}}</td>
- <td [ngClass]="getMarkColor(Student.Mark)">{{Student.Mark}}</td>
- <td>
+<tr *ngFor="let Student of studentList" [hidden]="Student.Mark < 50">
+ <td>{{ Student.Name }}</td>
+<td>{{ Student.Email }}</td>
+<td [ngClass]="getMarkColor(Student.Mark)">{{ Student.Mark }}</td>
+  <td>
     <span *ngIf="Student.Mark >= 50" class="pass-badge">PASS</span>
     <span *ngIf="Student.Mark < 50" class="fail-badge">Fail</span>
- </td>
+  </td>
 
 </tr>
+
+
+
+
+
 <h1 style="color: darkred; text-align: center;" >----------------------------</h1>
 
 <div class="form-group">

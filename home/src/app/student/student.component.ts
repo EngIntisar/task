@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent {
-  Mark:number=0;
+
+  mark=0;
 
   studentList: any[] = 
 [
@@ -15,12 +16,15 @@ export class StudentComponent {
     {Name:'Name 3', Email:'Email3@gmail.com',Mark:50},
     {Name:'Name 4', Email:'Email3@gmail.com',Mark:20},
 
+
 ];
 
 getMarkColor(Mark: number):string
 {
   return Mark < 50 ? 'red-text' : 'green-text';
 }
+
+
    getPassFailStatus(Mark: number):string
    {
     return Mark >= 50 ? 'PASS' : 'FAIL';
